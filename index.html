@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>My Portfolio</title>
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(to bottom, #6a11cb, #2575fc);
@@ -30,35 +30,87 @@
             margin-top: 10px;
         }
 
-        /* Portfolio Section */
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+        /* About Section */
+        .about {
+            padding: 30px 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
             animation: slideUp 2s ease-in-out;
         }
 
-        .portfolio-item {
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 30px 20px;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        .skills h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .skill {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
+            font-size: 1rem;
             transition: transform 0.3s;
         }
 
-        .portfolio-item:hover {
-            transform: scale(1.05);
+        .skill:hover {
+            transform: scale(1.1);
         }
 
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+        /* Contact Section */
+        .contact {
+            padding: 30px 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
         }
 
-        .portfolio-item h3 {
-            margin: 15px 0 10px;
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .contact a:hover {
+            background: white;
+            color: #6a11cb;
         }
 
         /* Footer */
@@ -95,7 +147,7 @@
             header h1 {
                 font-size: 2rem;
             }
-            header p {
+            header p, .about p, .contact p {
                 font-size: 1rem;
             }
         }
@@ -121,30 +173,36 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Explore my work and projects below!</p>
+        <h1>Hi, I'm [Your Name]</h1>
+        <p>Welcome to my portfolio. I’m a passionate developer and designer.</p>
     </header>
 
-    <section class="portfolio">
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Short description of Project 1.</p>
-        </div>
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Short description of Project 2.</p>
-        </div>
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300" alt="Project 3">
-            <h3>Project 3</h3>
-            <p>Short description of Project 3.</p>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a Computer Science Engineer with a love for building creative solutions. My expertise lies in developing responsive websites, solving technical challenges, and exploring new technologies to bring ideas to life.</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">C++</div>
+            <div class="skill">Python</div>
+            <div class="skill">React.js</div>
+            <div class="skill">Node.js</div>
         </div>
     </section>
 
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out!</p>
+        <a href="mailto:yourname@example.com">Email Me</a>
+    </section>
+
     <footer>
-        <p>&copy; 2024 My Portfolio | All Rights Reserved</p>
+        <p>&copy; 2024 [Your Name] | All Rights Reserved</p>
     </footer>
 </body>
 </html>
